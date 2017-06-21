@@ -1,6 +1,17 @@
-build:
-  image: reactioncommerce/base:latest
-  commands:
-    - go get
-    - go build
-    - go test
+pipeline:
+  build:
+    image: reactioncommerce/base:latest
+    commands:
+      - go get
+      - go build
+      - go test
+    notify:
+      email:
+        recipients:
+          - curranabell@gmail.com
+  publish:
+    docker:
+      username: curranabell
+      password: drz400sm
+      email: curranabell@gmail.com
+      repo: curranabell/reaction-nmp
