@@ -1,0 +1,6 @@
+build:
+  image: reactioncommerce/base:latest
+  commands:
+    - go get
+    - go build
+    - go test
