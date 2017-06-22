@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: reactioncommerce/base:latest
+    image: reactioncommerce/base:v2.0.0
     commands:
       - go get
       - go build
